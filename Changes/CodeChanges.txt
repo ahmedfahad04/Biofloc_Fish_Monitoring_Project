@@ -1,0 +1,12 @@
+database Module.py
+
+line: 163
+code: just added a try catch block
+
+try:
+            elements = self.tank_cursor.execute('SELECT tank_number FROM available_tanks').fetchall()
+            
+            for element in elements:
+                report_list.append(element[0])
+        except:
+            pass
