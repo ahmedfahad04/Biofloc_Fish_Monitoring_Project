@@ -1,6 +1,6 @@
 import time
 from test import *
-from sample import *
+from ui_main_sample import *
 from basic_functions import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -8,10 +8,6 @@ from PyQt5.QtGui import *
 from backend.database_module import database_manager as dm
 from PyQt5.QtWidgets import *
 from threading import *
-
-
-
-
 
 class MainWindow(QMainWindow):
 
@@ -51,17 +47,19 @@ class MainWindow(QMainWindow):
         self.obj.btn_prepare_water.clicked.connect(self.preparetank)
         self.obj.btn_fish_collection.clicked.connect(self.collectfish)
         self.obj.tabWidget.currentChanged.connect(self.Reload)
+        self.obj.table_water_info.setSelectionMode(QAbstractItemView.MultiSelection)
+
+        self.obj.btn_start_processing.clicked.connect(self.tab2_table)
 
 
         self.show()
 
-          # kahini 2
-        self.timer = QTimer()
-        self.timer.setInterval(1000)
-        self.timer.timeout.connect(self.recurring_timer)
-        self.timer.start()
+        # kahini 2
+        # self.timer = QTimer()
+        # self.timer.setInterval(1000)
+        # self.timer.timeout.connect(self.recurring_timer)
+        # self.timer.start()         
 
-         
 
     # section - 1: different helper methods 
     def initialize(self):
@@ -285,7 +283,8 @@ class MainWindow(QMainWindow):
                             
                 value = dm().pre_culture_water_report(tank_no)
                 ph = value[0]
-                tds = value[1]              
+                tds = value[1] 
+                vol = value[2]             
 
                 if tank_no == '' :
                     print("Empty")
@@ -299,10 +298,50 @@ class MainWindow(QMainWindow):
                     self.obj.table_water_info.setItem(
                         tr, 0, QtWidgets.QTableWidgetItem(str(tank_no)))
                     self.obj.table_water_info.setItem(
-                        tr, 1, QtWidgets.QTableWidgetItem(str(ph)))
+                        tr, 1, QtWidgets.QTableWidgetItem(str(vol)))
                     self.obj.table_water_info.setItem(
-                        tr, 2, QtWidgets.QTableWidgetItem(str(tds)))
-                                        
+                        tr, 2, QtWidgets.QTableWidgetItem(str(ph)))
+                    self.obj.table_water_info.setItem(
+                        tr, 3, QtWidgets.QTableWidgetItem(str(tds)))
+
+    def transfer_table(self, tank_num):
+
+        '''Will transfer the pre culture data to tab 2''' 
+        try: 
+            for tank in tank_num:
+                dm().active_tank_entry(tank)
+        except:
+            pass
+
+        return
+    
+    # will continue from here
+    def tab2_table(self):
+
+        data = []
+        selected = self.obj.table_water_info.selectedItems()
+        if selected:
+            paths = []
+            for item in selected: 
+                
+                if item.column() == 0:
+                    paths.append(item.data(0))
+
+                if item.column() == 1:
+                    paths.append(item.data(0))
+
+                if item.column() == 2:
+                    paths.append(item.data(0))
+
+                if item.column() == 3:
+                    paths.append(item.data(0))
+
+            data.append(paths)
+
+        for x in data:
+            print(x)
+              
+
     def pre_culture_table_manager_tab3(self):
 
         '''Controls the information flow of Tab3'''
@@ -354,6 +393,7 @@ class MainWindow(QMainWindow):
         #  available tank relisting
 
         # data -> whre the selected rows' data will go???
+
 
 
     # section - 3: these methods are connected to buttons
@@ -471,7 +511,7 @@ app = QApplication([])
 mw = MainWindow()
 app.exec_()
 
-
+# Hello Fahad... perfectly working
 
 
 

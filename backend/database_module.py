@@ -239,10 +239,10 @@ class database_manager:
 
         '''This method will return the latest water quality report of every pre_culture tank.
         If everything goes right, this method will return a tuple of ph and TDS data.
-        The tuple will store information in (pH, TDS) order.'''
+        The tuple will store information in (pH, TDS, volume) order.'''
 
         return self.tank_cursor.execute('''
-        SELECT pH, TDS 
+        SELECT pH, TDS, tank_volume 
         FROM pre_culture_tanks
         WHERE tank_number = ?''',(tank_num,)).fetchone()
 
@@ -252,13 +252,13 @@ class database_manager:
 
         return self.tank_cursor.execute('''SELECT tank_number, start_date, check_days, tank_volume FROM pre_culture_tanks''').fetchall()
 
-    def pre_culture_change_check_date(self, tank_num, check_days) -> bool:
+    def pre_culture_change_check_date(self, tank_num) -> bool:
 
         'Will change the date of last check in case the water does not meet the standards'
 
         self.tank_cursor.execute('''UPTADE pre_culture_tanks
         SET start_date = ?, check_days = ?
-        WHERE tank_number = ?''',(date.today(), check_days, tank_num))
+        WHERE tank_number = ?''',(date.today(), 1, tank_num))
 
         self.tank_database.commit()
 

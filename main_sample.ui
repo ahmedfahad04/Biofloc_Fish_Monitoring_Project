@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>884</width>
+    <height>534</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.987, y1:0, x2:0, y2:1, stop:0 rgba(19, 162, 225, 255), stop:1 rgba(255, 255, 255, 255));
+font: 63 12pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+         </property>
+         <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <property name="documentMode">
+          <bool>false</bool>
+         </property>
+         <property name="tabBarAutoHide">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="tab_cultivation_monitor_0">
+          <attribute name="title">
+           <string>চাষ পর্যবেক্ষণ</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="stackedWidget">
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="stk_button">
+              <widget class="QPushButton" name="btn_goto_newTankReg">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>140</x>
+                 <y>190</y>
+                 <width>572</width>
+                 <height>54</height>
+                </rect>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 20pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+               </property>
+               <property name="text">
+                <string>এখনো চাষ শুরু হয় নি।   নতুন জলাধার নিবন্ধন করুন</string>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="stk_table">
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="0">
+                  <widget class="QTableWidget" name="table_all_info">
+                   <column>
+                    <property name="text">
+                     <string>জলাধার নং </string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>জলাধারের আয়তন</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>মাছের ধরণ</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>চাষ শুরু দিন</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>চাষ শেষ হতে আরো বাকী </string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>লাস্ট চেক</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>pH</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>TDS</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>তাপমাত্রা</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Baloo Da 2 SemiBold</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_water_info_1">
+          <attribute name="title">
+           <string>পানি প্রস্ততি তথ্যসমূহ </string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="stackedWidget_2">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="stk_table2">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QTableWidget" name="table_water_info">
+                    <column>
+                     <property name="text">
+                      <string>জলাধার নং </string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Baloo Da 2 SemiBold</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>জলাধারের আয়তন</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Baloo Da 2 SemiBold</family>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>pH</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Baloo Da 2 SemiBold</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>TDS</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Baloo Da 2 SemiBold</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>মন্তব্য</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Baloo Da 2 SemiBold</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="btn_start_processing">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+border-radius: 12px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>পুনরায় প্রস্তুতি করুন/মাছ চাষ শুরু করুন</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_2">
+              <widget class="QLabel" name="lbl_message">
+               <property name="geometry">
+                <rect>
+                 <x>140</x>
+                 <y>160</y>
+                 <width>551</width>
+                 <height>131</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Baloo Da 2 SemiBold</family>
+                 <pointsize>20</pointsize>
+                 <weight>7</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 20pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+               </property>
+               <property name="text">
+                <string>এখনো কোন জলাধারে পানি প্রস্তুতি শুরু হয়নি</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_water_preperation_2">
+          <attribute name="title">
+           <string>পানি প্রস্তুতি পর্যায়</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0" rowspan="2">
+            <widget class="QFrame" name="frame_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_select_tank_wp">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>70</y>
+                <width>231</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+font: 63 13pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+              </property>
+              <property name="text">
+               <string>জলাধার নির্বাচন করুন</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="comboBox_select_tank_wp">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>120</y>
+                <width>231</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+font: 63 12pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="lineEdit_fish_name">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>200</y>
+                <width>231</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+font: 63 13pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>মাছের নাম</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="lineEdit_day">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>250</y>
+                <width>231</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+font: 63 13pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>দিন সংখ্যা </string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="2" colspan="3">
+            <widget class="QTableWidget" name="table_show_tank">
+             <property name="styleSheet">
+              <string notr="true">QTableWidget{
+		background-color: qlineargradient(spread:pad, x1:0.948481, y1:0.074, x2:0, y2:1, stop:0.14433 rgba(35, 181, 239, 255), stop:1 rgba(255, 255, 255, 255));
+   
+}</string>
+             </property>
+             <column>
+              <property name="text">
+               <string>জলাধার নং </string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Baloo Da 2 SemiBold</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>জলাধার আয়তন</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Baloo Da 2 SemiBold</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>মাছের নাম</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Baloo Da 2 SemiBold</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>দিন সংখ্যা </string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Baloo Da 2 SemiBold</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>তারিখ</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Baloo Da 2 SemiBold</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="btn_add_tank">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+border-radius: 17px;
+}
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>যোগ করুন</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="btn_delete_tank">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>160</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+border-radius: 15px;
+}</string>
+             </property>
+             <property name="text">
+              <string>জলাধার বাতিল করুন</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" colspan="2">
+            <widget class="QPushButton" name="btn_prepare_water">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Baloo Da 2 SemiBold</family>
+               <pointsize>12</pointsize>
+               <weight>7</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+border-radius: 17px;
+}</string>
+             </property>
+             <property name="text">
+              <string>পানি প্রস্তুতি আরম্ভ করুন</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_tank_basic_info_3">
+          <attribute name="title">
+           <string>জলাধার তথ্য ব্যবস্থাপনা</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="btn_new_tank_reg">
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Baloo Da 2 SemiBold</family>
+                 <pointsize>17</pointsize>
+                 <weight>7</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+
+font: 63 17pt &quot;Baloo Da 2 SemiBold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>নতুন জলাধার নিবন্ধন</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_delete_tank_reg">
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+
+font: 63 15pt &quot;Baloo Da 2 SemiBold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>জলাধার নিবন্ধন বাতিলকরন</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_fish_collection_6">
+          <attribute name="title">
+           <string>মাছ উত্তোলন</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_fish_collection">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="mouseTracking">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+
+color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));
+border-radius: 17px;
+}
+
+
+
+</string>
+               </property>
+               <property name="text">
+                <string>মাছ উত্তোলন করুন </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QTableWidget" name="table_show_all_tanks">
+               <property name="styleSheet">
+                <string notr="true">	background-color: qlineargradient(spread:pad, x1:0.948481, y1:0.074, x2:0, y2:1, stop:0.14433 rgba(35, 181, 239, 255), stop:1 rgba(255, 255, 255, 255));
+font: 63 12pt &quot;Baloo Da 2 SemiBold&quot;;</string>
+               </property>
+               <column>
+                <property name="text">
+                 <string>জলাধার নং</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Baloo Da 2 SemiBold</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>মাছ</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Baloo Da 2 SemiBold</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>চাষ শুরুর তারিখ</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Baloo Da 2 SemiBold</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
