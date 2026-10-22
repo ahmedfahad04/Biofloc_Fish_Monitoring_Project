@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.sip import enableautoconversion
-import PySide2
 from backend.database_module import database_manager as dm
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *

@@ -37,7 +37,10 @@ class Ui_MainWindow(object):
         self.tabWidget.setObjectName(u"tabWidget")
         self.tabWidget.setCursor(QCursor(Qt.ArrowCursor))
         self.tabWidget.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.987, y1:0, x2:0, y2:1, stop:0 rgba(19, 162, 225, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"font: 63 12pt \"Baloo Da 2 SemiBold\";")
+"font: 63 12pt \"Baloo Da 2 SemiBold\";\n"
+"color: rgb(0, 0, 0);\n"
+"QTabBar::tab { color: rgb(0, 0, 0); }\n"
+"QTabBar::tab:selected { color: rgb(0, 0, 0); }")
         self.tabWidget.setTabShape(QTabWidget.Rounded)
         self.tabWidget.setDocumentMode(False)
         self.tabWidget.setTabBarAutoHide(False)
@@ -188,7 +191,8 @@ class Ui_MainWindow(object):
         self.comboBox_select_tank_wp.setGeometry(QRect(10, 120, 231, 31))
         self.comboBox_select_tank_wp.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: qconicalgradient(cx:0.5, cy:0.5, angle:356.1, stop:0 rgba(65, 41, 90, 255), stop:1 rgba(47, 7, 67, 255));\n"
-"font: 63 12pt \"Baloo Da 2 SemiBold\";")
+"font: 63 12pt \"Baloo Da 2 SemiBold\";\n"
+"QAbstractItemView { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); }")
         self.lineEdit_fish_name = QLineEdit(self.frame_2)
         self.lineEdit_fish_name.setObjectName(u"lineEdit_fish_name")
         self.lineEdit_fish_name.setGeometry(QRect(10, 200, 231, 41))
@@ -231,7 +235,8 @@ class Ui_MainWindow(object):
         self.table_show_tank.setStyleSheet(u"QTableWidget{\n"
 "		background-color: qlineargradient(spread:pad, x1:0.948481, y1:0.074, x2:0, y2:1, stop:0.14433 rgba(35, 181, 239, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "   \n"
-"}")
+"}\n"
+"QHeaderView::section { color: rgb(0, 0, 0); }")
 
         self.gridLayout_2.addWidget(self.table_show_tank, 0, 1, 2, 3)
 
@@ -375,7 +380,8 @@ class Ui_MainWindow(object):
         self.table_show_all_tanks.setHorizontalHeaderItem(2, __qtablewidgetitem20)
         self.table_show_all_tanks.setObjectName(u"table_show_all_tanks")
         self.table_show_all_tanks.setStyleSheet(u"	background-color: qlineargradient(spread:pad, x1:0.948481, y1:0.074, x2:0, y2:1, stop:0.14433 rgba(35, 181, 239, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"font: 63 12pt \"Baloo Da 2 SemiBold\";")
+"font: 63 12pt \"Baloo Da 2 SemiBold\";\n"
+"QHeaderView::section { color: rgb(0, 0, 0); }")
 
         self.gridLayout_7.addWidget(self.table_show_all_tanks, 0, 0, 1, 2)
 

@@ -38,7 +38,10 @@ class Ui_MainWindow(object):
         self.tabWidget.setObjectName(u"tabWidget")
         self.tabWidget.setCursor(QCursor(Qt.ArrowCursor))
         self.tabWidget.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.987, y1:0, x2:0, y2:1, stop:0 rgba(19, 162, 225, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"font: 63 12pt \"Baloo Da 2 SemiBold\";")
+"font: 63 12pt \"Baloo Da 2 SemiBold\";\n"
+"color: rgb(0, 0, 0);\n"
+"QTabBar::tab { color: rgb(0, 0, 0); }\n"
+"QTabBar::tab:selected { color: rgb(0, 0, 0); }")
         self.tabWidget.setTabShape(QTabWidget.Rounded)
         self.tabWidget.setDocumentMode(False)
         self.tabWidget.setTabBarAutoHide(False)

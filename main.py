@@ -1,3 +1,4 @@
+#!/usr/bin/python3.10
 import time
 from test import *
 from sample import *
